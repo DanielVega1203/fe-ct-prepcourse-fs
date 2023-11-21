@@ -179,17 +179,14 @@ function mesesDelAño(array) {
    for (var i = 0; i < array.length; i++) {
      var mes = array[i];
  
-     // Verifica si el mes es "Enero", "Marzo" o "Noviembre"
      if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre") {
        mesesEncontrados.push(mes);
      }
    }
  
    if (mesesEncontrados.length === 3) {
-     // Si se encontraron los tres meses, retorna el arreglo con los meses encontrados
      return mesesEncontrados;
    } else {
-     // Si falta algún mes, retorna el mensaje indicando que no se encontraron todos los meses
      return 'No se encontraron los meses pedidos';
    }
 }
@@ -198,12 +195,28 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+
+   var Resultado = []
+
+   for (var i = 0; i <= 10; i++) {
+      Resultado.push(6 * i)
+   }
+   return Resultado
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+
+   var mayores = []
+
+   for (var i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+         mayores.push(array[i]);
+      }
+   }
+   return mayores;
 }
 
 /* ----------------------------------------------------------------------------------
@@ -217,6 +230,18 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   
+   var nuevoArreglo = [];
+
+   for (var i = 0; i < 10; i++) {
+      num += 2;
+      nuevoArreglo.push(num);
+
+      if (num === i) {
+         return "Se interrumpió la ejecución";  
+      } 
+   } 
+   return nuevoArreglo;
 }
 
 function continueStatement(num) {
@@ -226,6 +251,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var array2 = [];   
+
+   for (var i = 0; i < 10; i++) {
+      if (i === 5) {
+         continue;
+      }
+      num += 2
+      array2.push(num);
+   }
+   return array2;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
